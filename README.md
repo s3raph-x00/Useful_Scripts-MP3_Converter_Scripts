@@ -57,7 +57,7 @@ Portable MP3 Player AMV Format - Actions 1.8 inch:
 ffmpeg -i source.mp4 -vf "scale=-2:128, crop=160:128" -r 14 -pix_fmt yuvj420p -c:v amv -c:a adpcm_ima_amv -ac 1 -ar 22050 -block_size 1575 dest.amv 
 
 Portable MP3 Player AMV Format - RUIZU X52
-ffmpeg.exe  -i source.mp4 -f "amv" -vf "mpdecimate,scale=160:128,crop=in_w:128" -strict -1 -r "15" -ac 1 -ar 22050  -block_size 1470 -n -qmin 3 -qmax 3 dest.amv 
+ffmpeg.exe -i source.mp4 -f "amv" -vf "mpdecimate,scale=160:128,crop=in_w:128" -strict -1 -r "15" -ac 1 -ar 22050  -block_size 1470 -n -qmin 3 -qmax 3 dest.amv 
 
 Portable MP3 Player AMV Format - Actions 2.4 inch:  
 ffmpeg -i source.mp4 -vf "scale=-2:240, crop=320:240" -r 14 -pix_fmt yuvj420p -c:v amv -c:a adpcm_ima_amv -ac 1 -ar 22050 -block_size 1575 dest.amv  
@@ -87,38 +87,11 @@ e.g: ffmpeg -i source.mp4 -vf "scale=-2:128, crop=160:128,subtitles=source.srt:f
 Add "-map 0 -segment_time 00:05:00 -f segment -reset_timestamps 1" before destination name, and "%02d" (fragment number) in the destination filename.  
 e.g: ffmpeg -i source.mp4 -vf "scale=-2:128, crop=160:128, transpose=2, vflip" -r 16 -acodec pcm_s16le -ac 2 -ar 22050 -pix_fmt yuvj420p -c:v mjpeg -q:v 2 -map 0 -segment_time 00:05:00 -f segment -reset_timestamps 1 dest%02d.avi  
 
-## Where to get those players?
-
-All those players are/were available to buy in AliExpress and similar online shops (Shopee, eBay, and so on).  
-
-3.5 inch R36S Linux game console https://s.click.aliexpress.com/e/_c40iPQr7  
-4.3 inch MP5 X7 4.3 https://s.click.aliexpress.com/e/_c4n83cC5  
-2.8 inch S-Mobile Feature phone https://s.click.aliexpress.com/e/_Dmwte27  
-2.4 inch Hoswn i79 Feature phone https://s.click.aliexpress.com/e/_DlKuR7F  
-2.4 inch Shenju Portable MP3 Player touchscreen https://s.click.aliexpress.com/e/_DEnTDFZ  
-1.8 inch Shenju Portable MP3 Player round button https://s.click.aliexpress.com/e/_DDVf1Ph  
-1.8 inch Shenju Portable MP3 Player round button https://s.click.aliexpress.com/e/_DmEggA7  
-1.8 inch Shenju Portable MP3 Player side button non-FM-Radio https://s.click.aliexpress.com/e/_DlJWPNf  
-1.8 inch Actions Hello Kitty MP3 Player https://s.click.aliexpress.com/e/_DDUd7U5  
-1.8 inch MKTEL Oye 3 Feature phone https://s.click.aliexpress.com/e/_Deu0nvz  
-1.8 inch MKTEL M2023 Feature phone https://s.click.aliexpress.com/e/_Dk0CZNB  
-  
-2025 new portable players  
-  
-1.8 inch Button Portable Music Player https://s.click.aliexpress.com/e/_oCC1BC9  
-2.0 inch Touch Portable Music Player https://s.click.aliexpress.com/e/_oC3nAlL  
-2.4 inch Touch Portable Music Player https://s.click.aliexpress.com/e/_ooyuSkf  
-
 ## 2025 new portable players video converter tool
 
 https://github.com/fdd4s/portable_music_player_avi_video_converter_tool_2025
 
-## Related projects
-
-https://github.com/fdd4s/shazam-autotag
-
 ## Credits
 
-Created by fdd4s  
-Send feedback and questions to fc1471789@gmail.com  
+Created by fdd4s modified by s3raph
 All .sh files are public domain https://unlicense.org/  
