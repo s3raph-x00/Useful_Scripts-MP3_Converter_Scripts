@@ -54,8 +54,11 @@ Portable MP3 Player AVI Format - Shenju 2.4 inch:
 ffmpeg -i source.mp4 -vf "scale=-2:240, crop=320:240, transpose=2, vflip" -r 6 -acodec pcm_s16le -ac 2 -ar 22050 -pix_fmt yuvj420p -c:v mjpeg -q:v 10 dest.avi  
   
 Portable MP3 Player AMV Format - Actions 1.8 inch:  
-ffmpeg -i source.mp4 -vf "scale=-2:128, crop=160:128" -r 14 -pix_fmt yuvj420p -c:v amv -c:a adpcm_ima_amv -ac 1 -ar 22050 -block_size 1575 dest.amv  
-  
+ffmpeg -i source.mp4 -vf "scale=-2:128, crop=160:128" -r 14 -pix_fmt yuvj420p -c:v amv -c:a adpcm_ima_amv -ac 1 -ar 22050 -block_size 1575 dest.amv 
+
+Portable MP3 Player AMV Format - RUIZU X52
+ffmpeg.exe  -i source.mp4 -f "amv" -vf "mpdecimate,scale=160:128,crop=in_w:128" -strict -1 -r "15" -ac 1 -ar 22050  -block_size 1470 -n -qmin 3 -qmax 3 dest.amv 
+
 Portable MP3 Player AMV Format - Actions 2.4 inch:  
 ffmpeg -i source.mp4 -vf "scale=-2:240, crop=320:240" -r 14 -pix_fmt yuvj420p -c:v amv -c:a adpcm_ima_amv -ac 1 -ar 22050 -block_size 1575 dest.amv  
   
